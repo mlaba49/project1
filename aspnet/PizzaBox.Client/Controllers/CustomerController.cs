@@ -21,7 +21,8 @@ namespace PizzaBox.Client.Controllers
 
       customer.Order = new OrderViewModel()
       {
-        Stores = _ctx.GetStores()
+        Stores = _ctx.GetStores(),
+        Users = _ctx.GetUsers()
       };
       return View("home", customer.Order);
     }

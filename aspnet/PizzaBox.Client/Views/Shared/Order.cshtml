@@ -2,10 +2,16 @@
 
 @* tag helper way *@
 <form asp-action="post" asp-controller="order" method="POST" asp-antiforgery="true">
-    @foreach (var item in Model.Stores)
+    @foreach (var user in Model.Users)
     {
-        <input type="radio" asp-for="@Model.Store" value="@item">
-        <label for="@item">@item</label>
+        <input type="radio" asp-for="@Model.Users" value="@user">
+        <label for="@user">@user</label>
+    }
+    
+    @foreach (var store in Model.Stores)
+    {
+        <input type="radio" asp-for="@Model.Store" value="@store">
+        <label for="@store">@store</label>
     }
 
     <button type="submit">Place Order</button>

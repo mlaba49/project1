@@ -17,6 +17,18 @@ namespace PizzaBox.Storing
     {
       return _ctx.Stores.Select(s => s.Name).ToList();
     }
+    public List<string> GetUsers()
+    {
+      return _ctx.Users.Select(u => u.Name).ToList();
+    }
+    public List<string> GetPizzas()
+    {
+      return _ctx.APizzaModel.Select(p => p.ToString()).ToList();
+    }
+    public List<string> GetOrders()
+    {
+      return _ctx.Order.Select(o => o.ToString()).ToList();
+    }
 
     // public IEnumerable<T> Get<T>() where T : AModel
     // {
