@@ -80,3 +80,4 @@
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/_CustomLayout.cshtml.g.cs
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/Order.cshtml.g.cs
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/Home.cshtml.g.cs
+/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/OrderPlaced.cshtml.g.cs

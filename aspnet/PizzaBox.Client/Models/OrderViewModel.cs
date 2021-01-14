@@ -16,5 +16,17 @@ namespace PizzaBox.Client.Models
 
     [Required]
     public string User { get; set; }
+    public string Size { get; set; }
+    public string Crust { get; set; }
+    public string Topping1 { get; set; }
+    public string Topping2 { get; set; }
+    public string Topping3 { get; set; }
+    public string Topping4 { get; set; }
+    public string Topping5 { get; set; }
+        public override string ToString()
+        {
+            return "Store: " + Store + ", User: " + User + ", Size: " + Size + ", Crust: " + Crust + ", Topping 1: " + Topping1 + ", Topping 2: " + Topping2 + ", Topping 3: " + Topping3 + ", Topping 4: " + Topping4 + ", Topping 5: " + Topping5;
+        }
+  
   }
 }

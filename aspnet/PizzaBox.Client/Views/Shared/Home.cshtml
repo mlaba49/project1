@@ -4,16 +4,80 @@
   User:<br>
   @foreach (var user in Model.Users)
   {
-      <input type="radio" asp-for="@Model.Users" value="@user">
+      <input type="radio" asp-for="@Model.User" value="@user">
       <label for="@user">@user</label>
   }
   <br>
   Store:<br>
   @foreach (var store in Model.Stores)
   {
-    <input type="radio" asp-for="@Model.Stores" value="@store">
+    <input type="radio" asp-for="@Model.Store" value="@store">
     <label for="@store">@store</label>
   }
+  <br>
+  Pizza:<br>
+  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL">
+    <label for="NORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Size" value="LARGE">
+    <label for="LARGE">Large</label>
+     <input type="radio" asp-for="@Model.Size" value="NORMAL">
+    <label for="SMALL">Normal</label>
+  <br>
+  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL">
+    <label for="NORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Crust" value="CHEESE">
+    <label for="CHEESE">Cheese</label>
+  <br>
+  <label for="topping1" asp-for="@Model.Topping1">Topping 1:</label>
+    <select name="topping1" id="topping1">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping2" asp-for="@Model.Topping2">Topping 2:</label>
+    <select name="topping2" id="topping2">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping3" asp-for="@Model.Topping3">Topping 3:</label>
+    <select name="topping3" id="topping3">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping4" asp-for="@Model.Topping4">Topping 4:</label>
+    <select name="topping4" id="topping4">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping5" asp-for="@Model.Topping5">Topping 5:</label>
+    <select name="topping5" id="topping5">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
   <br>
   <button type="submit">Place Order</button>
 </form>

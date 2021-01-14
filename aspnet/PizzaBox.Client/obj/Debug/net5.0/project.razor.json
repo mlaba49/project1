@@ -15658,6 +15658,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/OrderPlaced.cshtml",
+      "TargetPath": "Views\\Shared\\OrderPlaced.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/Index.cshtml",
       "TargetPath": "Views\\Home\\Index.cshtml",
       "FileKind": "mvc"
