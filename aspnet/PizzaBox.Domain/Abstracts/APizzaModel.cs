@@ -14,6 +14,7 @@ namespace PizzaBox.Domain.Abstracts {
         public string Topping5 { get; set; }
 
         public long OrderEntityId { get; set; }
+        public double Price { get; set; }
 
         public APizzaModel() {
             
@@ -43,7 +44,7 @@ namespace PizzaBox.Domain.Abstracts {
 
         public override string ToString()
         {
-            return "Crust: " + Crust + ", Size: " + Size + ", Toppings: " + Topping1 + ", " + Topping2 + ", " + Topping3 + ", " + Topping4 + ", " + Topping5;
+            return "Crust: " + Crust + ", Size: " + Size + ", Toppings: " + Topping1 + ", " + Topping2 + ", " + Topping3 + ", " + Topping4 + ", " + Topping5 + ", $" + Price;
         }
     }
 

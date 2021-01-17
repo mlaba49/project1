@@ -10,6 +10,8 @@ namespace PizzaBox.Client.Models
   {
     public List<string> Stores { get; set; }
     public List<string> Users { get; set; }
+    public List<string> Orders { get; set; }
+    public List<string> Pizzas { get; set; }
 
     [Required]
     public string Store { get; set; }

@@ -1,5 +1,7 @@
 @model PizzaBox.Client.Models.OrderViewModel
 
+<h1>Order Pizza</h1>
+
 <form asp-action="post" asp-controller="order" asp-antiforgery="true" method="POST">
   User:<br>
   @foreach (var user in Model.Users)

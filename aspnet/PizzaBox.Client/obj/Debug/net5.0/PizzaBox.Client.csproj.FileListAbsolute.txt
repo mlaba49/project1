@@ -81,3 +81,7 @@
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/Order.cshtml.g.cs
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/Home.cshtml.g.cs
 /home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/OrderPlaced.cshtml.g.cs
+/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/ViewCustomerOrder.cshtml.g.cs
+/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/CustomerOrders.cshtml.g.cs
+/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/StoreOrders.cshtml.g.cs
+/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/obj/Debug/net5.0/Razor/Views/Shared/ViewStoreOrder.cshtml.g.cs

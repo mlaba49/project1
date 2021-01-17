@@ -1,0 +1,14 @@
+@model PizzaBox.Client.Models.OrderViewModel
+
+<h1>View Customer Orders</h1>
+
+<form asp-action="post" asp-controller="customer" asp-antiforgery="true" method="POST">
+  User:<br>
+  @foreach (var user in Model.Users)
+  {
+      <input type="radio" asp-for="@Model.User" value="@user">
+      <label for="@user">@user</label>
+  }
+  <br>
+  <button type="submit">View Orders</button>
+</form>

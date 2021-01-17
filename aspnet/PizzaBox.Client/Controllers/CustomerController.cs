@@ -26,5 +26,34 @@ namespace PizzaBox.Client.Controllers
       };
       return View("home", customer.Order);
     }
+
+    [HttpGet]
+    public IActionResult ViewCustomerOrders()
+    {
+      var customer = new CustomerViewModel();
+
+      customer.Order = new OrderViewModel()
+      {
+        Stores = _ctx.GetStores(),
+        Users = _ctx.GetUsers()
+      };
+      return View("ViewCustomerOrder", customer.Order);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult Post(OrderViewModel model)
+    {
+      var customer = new CustomerViewModel();
+
+      customer.Order = new OrderViewModel()
+      {
+        Orders = _ctx.GetOrders(),
+        Pizzas = _ctx.GetPizzasByUser(model.User),
+        Users = _ctx.GetUsers()
+      };
+      
+      return View("CustomerOrders", customer.Order);
+    }
   }
 }
