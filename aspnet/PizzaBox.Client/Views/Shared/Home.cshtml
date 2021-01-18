@@ -3,36 +3,37 @@
 <h1>Order Pizza</h1>
 
 <form asp-action="post" asp-controller="order" asp-antiforgery="true" method="POST">
-  User:<br>
-  @foreach (var user in Model.Users)
-  {
-      <input type="radio" asp-for="@Model.User" value="@user">
-      <label for="@user">@user</label>
-  }
+  <label for="user" asp-for="@Model.User">User:</label>
+    <select name="user" id="user">
+      @foreach (var user in Model.Users)
+      {
+          <option value="@user">@user</option>
+      }
+    </select>
   <br>
-  Store:<br>
-  @foreach (var store in Model.Stores)
-  {
-    <input type="radio" asp-for="@Model.Store" value="@store">
-    <label for="@store">@store</label>
-  }
+  <label for="store" asp-for="@Model.Store">Store:</label>
+    <select name="store" id="store">
+      @foreach (var store in Model.Stores)
+      {
+          <option value="@store">@store</option>
+      }
+    </select>
   <br>
   Pizza:<br>
-  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL">
+  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL" required>
     <label for="NORMAL">Normal</label>
      <input type="radio" asp-for="@Model.Size" value="LARGE">
     <label for="LARGE">Large</label>
      <input type="radio" asp-for="@Model.Size" value="NORMAL">
     <label for="SMALL">Normal</label>
   <br>
-  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL">
+  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL" required>
     <label for="NORMAL">Normal</label>
      <input type="radio" asp-for="@Model.Crust" value="CHEESE">
     <label for="CHEESE">Cheese</label>
   <br>
   <label for="topping1" asp-for="@Model.Topping1">Topping 1:</label>
     <select name="topping1" id="topping1">
-      <option value="NONE">None</option>
       <option value="EXTRA_CHEESE">Extra Cheese</option>
       <option value="PEPPERONI">Pepperoni</option>
       <option value="BACON">Bacon</option>
@@ -42,7 +43,6 @@
     </select>
   <label for="topping2" asp-for="@Model.Topping2">Topping 2:</label>
     <select name="topping2" id="topping2">
-      <option value="NONE">None</option>
       <option value="EXTRA_CHEESE">Extra Cheese</option>
       <option value="PEPPERONI">Pepperoni</option>
       <option value="BACON">Bacon</option>

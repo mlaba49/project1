@@ -3,12 +3,13 @@
 <h1>View Store Orders</h1>
 
 <form asp-action="post" asp-controller="store" asp-antiforgery="true" method="POST">
-  User:<br>
-  @foreach (var store in Model.Stores)
-  {
-      <input type="radio" asp-for="@Model.Store" value="@store">
-      <label for="@store">@store</label>
-  }
+  <label for="store" asp-for="@Model.Store">Store:</label>
+    <select name="store" id="store">
+      @foreach (var store in Model.Stores)
+      {
+          <option value="@store">@store</option>
+      }
+    </select>
   <br>
   <button type="submit">View Orders</button>
 </form>
