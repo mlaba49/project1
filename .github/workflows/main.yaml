@@ -21,7 +21,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-20.04
     env:
-      SONARCLOUD_TOKEN: ${{ secrets.project1Token }}
+      SONARCLOUD_TOKEN: ${{ secrets.PROJECT1TOKEN }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
@@ -39,7 +39,7 @@ jobs:
       - analyze
     runs-on: ubuntu-20.04
     env:
-      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
+      DOCKER_TOKEN: ${{ secrets.PROJECT1DOCKERTOKEN }}
       DOCKER_USER: ${{ secrets.DOCKER_USER }}
     steps:
       - uses: actions/checkout@v2
