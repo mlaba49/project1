@@ -21,7 +21,7 @@ jobs:
     needs: [build, test]
     runs-on: ubuntu-20.04
     env:
-      SONARCLOUD_TOKEN: ${{ secrets.michaelToken }}
+      SONARCLOUD_TOKEN: ${{ secrets.project1Token }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
