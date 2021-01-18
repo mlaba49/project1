@@ -15,7 +15,7 @@ namespace PizzaBox.Client.Controllers
     }
 
     [HttpGet]
-    public IActionResult Home()
+    public IActionResult MakeOrder()
     {
       var customer = new CustomerViewModel();
 
@@ -24,7 +24,7 @@ namespace PizzaBox.Client.Controllers
         Stores = _ctx.GetStores(),
         Users = _ctx.GetUsers()
       };
-      return View("home", customer.Order);
+      return View("order", customer.Order);
     }
 
     [HttpGet]

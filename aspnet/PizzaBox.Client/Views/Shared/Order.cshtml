@@ -1,49 +1,85 @@
 @model PizzaBox.Client.Models.OrderViewModel
 
-@* tag helper way *@
-<form asp-action="post" asp-controller="order" method="POST" asp-antiforgery="true">
-    @foreach (var user in Model.Users)
-    {
-        <input type="radio" asp-for="@Model.Users" value="@user">
-        <label for="@user">@user</label>
-    }
-    
-    @foreach (var store in Model.Stores)
-    {
-        <input type="radio" asp-for="@Model.Store" value="@store">
-        <label for="@store">@store</label>
-    }
+<h1>Order Pizza</h1>
 
-    <button type="submit">Place Order</button>
+<form asp-action="post" asp-controller="order" asp-antiforgery="true" method="POST">
+  <label for="user" asp-for="@Model.User">User:</label>
+    <select name="user" id="user">
+      @foreach (var user in Model.Users)
+      {
+          <option value="@user">@user</option>
+      }
+    </select>
+  <br>
+  <label for="store" asp-for="@Model.Store">Store:</label>
+    <select name="store" id="store">
+      @foreach (var store in Model.Stores)
+      {
+          <option value="@store">@store</option>
+      }
+    </select>
+  <br>
+  Pizza:<br>
+  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL" required>
+    <label for="NORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Size" value="LARGE">
+    <label for="LARGE">Large</label>
+     <input type="radio" asp-for="@Model.Size" value="SMALL">
+    <label for="SMALL">Small</label>
+  <br>
+  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL" required>
+    <label for="NORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Crust" value="CHEESE">
+    <label for="CHEESE">Cheese</label>
+  <br>
+  <label for="topping1" asp-for="@Model.Topping1">Topping 1:</label>
+    <select name="topping1" id="topping1">
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping2" asp-for="@Model.Topping2">Topping 2:</label>
+    <select name="topping2" id="topping2">
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping3" asp-for="@Model.Topping3">Topping 3:</label>
+    <select name="topping3" id="topping3">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping4" asp-for="@Model.Topping4">Topping 4:</label>
+    <select name="topping4" id="topping4">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <label for="topping5" asp-for="@Model.Topping5">Topping 5:</label>
+    <select name="topping5" id="topping5">
+      <option value="NONE">None</option>
+      <option value="EXTRA_CHEESE">Extra Cheese</option>
+      <option value="PEPPERONI">Pepperoni</option>
+      <option value="BACON">Bacon</option>
+      <option value="HAM">Ham</option>
+      <option value="ONION">Onion</option>
+      <option value="PINEAPPLE">Pineapple</option>
+    </select>
+  <br>
+  <button type="submit">Place Order</button>
 </form>
-
-@* html way
-<form action="/order/post" method="POST">
-    @foreach (var item in Model.Stores)
-    {
-        <input type="radio" name="store" id="@item" value="@item">
-        <label for="@item">@item</label>
-    }
-
-    @foreach (var item in Model.Pizzas)
-    {
-        <input type="checkbox" name="pizza-selection" id="@item" value="@item">
-        <label for="@item">@item</label>
-    }
-
-    <button type="submit">Place Order</button>
-</form> *@
-
-@* html helper way
-@using (@Html.BeginForm("post", "order", null, FormMethod.Post)) {
-    @Html.AntiForgeryToken()
-
-    @foreach (var item in Model.Stores)
-    {
-        @Html.RadioButtonFor(m => m.Store, item)
-        @Html.LabelFor(m => m.Store, item)
-        @Html.ValidationMessageFor(m => m.Store)
-    }
-
-    <button type="submit">Place Order</button>
-} *@
