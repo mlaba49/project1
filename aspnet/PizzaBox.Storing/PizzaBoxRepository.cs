@@ -54,12 +54,49 @@ namespace PizzaBox.Storing
     }
     public List<string> GetOrders()
     {
-      return _ctx.Order.Select(o => o.ToString()).ToList();
+      List<string> result = new List<string>();
+      foreach(Order o in _ctx.Order) {
+        string orderString = o.ToString();
+        foreach(Pizza p in _ctx.APizzaModel) {
+          if(p.OrderEntityId == o.EntityId) orderString += "\n" + p.ToString();
+        }
+        result.Add(orderString);
+      }
+      return result;
     }
-
-    // public IEnumerable<T> Get<T>() where T : AModel
-    // {
-    //   return _ctx.Set<T>().Select(t => t.GetType().GetProperty()).ToList();
-    // }
+    public List<string> GetOrdersByUser(string user)
+    {
+      List<string> result = new List<string>();
+      foreach(User u in _ctx.Users) {
+        foreach(Order o in _ctx.Order) {
+          if(o.UserEntityId == u.EntityId && u.Name == user) {
+            result.Add(o.ToString());
+            foreach(Pizza p in _ctx.APizzaModel) {
+              if(p.OrderEntityId == o.EntityId) result.Add(p.ToString());
+            }
+          }
+          
+        }
+      }
+      
+      return result;
+    }
+    public List<string> GetOrdersByStore(string store)
+    {
+      List<string> result = new List<string>();
+      foreach(Store s in _ctx.Stores) {
+        foreach(Order o in _ctx.Order) {
+          if(o.StoreEntityId == s.EntityId && s.Name == store) {
+            result.Add(o.ToString());
+            foreach(Pizza p in _ctx.APizzaModel) {
+              if(p.OrderEntityId == o.EntityId) result.Add(p.ToString());
+            }
+          }
+          
+        }
+      }
+      
+      return result;
+    }
   }
 }

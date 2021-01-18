@@ -44,7 +44,7 @@ namespace PizzaBox.Domain.Abstracts {
 
         public override string ToString()
         {
-            return "Crust: " + Crust + ", Size: " + Size + ", Toppings: " + Topping1 + ", " + Topping2 + ", " + Topping3 + ", " + Topping4 + ", " + Topping5 + ", $" + Price;
+            return "Crust: " + Crust + ", Size: " + Size + ", Toppings: " + Topping1 + ", " + Topping2 + ", " + Topping3 + ", " + Topping4 + ", " + Topping5 + ", $" + System.Math.Round(Price, 2);
         }
     }
 

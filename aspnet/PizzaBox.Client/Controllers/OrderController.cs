@@ -28,7 +28,9 @@ namespace PizzaBox.Client.Controllers
           User = _ctx.Users.FirstOrDefault(u => u.Name == model.User)
         };
 
-        order.MakePizza(model.Crust, model.Size, model.Topping1, model.Topping2, model.Topping3, model.Topping4, model.Topping5);
+        for(int i = 0; i < model.Amount; i++) {
+          order.MakePizza(model.Crust, model.Size, model.Topping1, model.Topping2, model.Topping3, model.Topping4, model.Topping5);
+        }
         _ctx.Order.Add(order);
         _ctx.SaveChanges();
         

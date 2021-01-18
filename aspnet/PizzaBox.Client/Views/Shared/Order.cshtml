@@ -20,18 +20,20 @@
     </select>
   <br>
   Pizza:<br>
-  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL" required>
-    <label for="NORMAL">Normal</label>
-     <input type="radio" asp-for="@Model.Size" value="LARGE">
-    <label for="LARGE">Large</label>
-     <input type="radio" asp-for="@Model.Size" value="SMALL">
-    <label for="SMALL">Small</label>
+  Base Price: $9.99<br>
+  Size: <input type="radio" asp-for="@Model.Size" value="NORMAL" id="SNORMAL" required>
+    <label for="SNORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Size" value="LARGE" id="SLARGE">
+    <label for="SLARGE">Large (+$5.00)</label>
+     <input type="radio" asp-for="@Model.Size" value="SMALL" id="SSMALL">
+    <label for="SSMALL">Small (-$5.00)</label>
   <br>
-  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL" required>
-    <label for="NORMAL">Normal</label>
-     <input type="radio" asp-for="@Model.Crust" value="CHEESE">
-    <label for="CHEESE">Cheese</label>
+  Crust: <input type="radio" asp-for="@Model.Crust" value="NORMAL" id="CNORMAL" required>
+    <label for="CNORMAL">Normal</label>
+     <input type="radio" asp-for="@Model.Crust" value="CHEESE" id="CCHEESE">
+    <label for="CCHEESE">Cheese (+$5.00)</label>
   <br>
+  +$5.00 per topping<br>
   <label for="topping1" asp-for="@Model.Topping1">Topping 1:</label>
     <select name="topping1" id="topping1">
       <option value="EXTRA_CHEESE">Extra Cheese</option>
@@ -79,6 +81,14 @@
       <option value="HAM">Ham</option>
       <option value="ONION">Onion</option>
       <option value="PINEAPPLE">Pineapple</option>
+    </select><br>
+  <label for="amount" asp-for="@Model.Amount">Amount of Pizzas:</label>
+    <select name="amount" id="amount">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
     </select>
   <br>
   <button type="submit">Place Order</button>

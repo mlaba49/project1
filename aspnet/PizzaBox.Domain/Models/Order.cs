@@ -24,11 +24,7 @@ namespace PizzaBox.Domain.Models {
 
         public override string ToString()
         {
-            var sb = new StringBuilder();
-            foreach(var p in Pizzas) {
-                sb.AppendLine(p.ToString());
-            }
-            return $"You have ordered these pizzas: {sb.ToString()}";
+            return "Order #" + EntityId + " (Total price: $" + System.Math.Round(Price, 2) + "): ";
         }
     }
 }

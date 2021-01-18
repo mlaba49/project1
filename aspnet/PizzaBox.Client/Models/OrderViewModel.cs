@@ -25,10 +25,11 @@ namespace PizzaBox.Client.Models
     public string Topping3 { get; set; }
     public string Topping4 { get; set; }
     public string Topping5 { get; set; }
-        public override string ToString()
-        {
-            return "Store: " + Store + ", User: " + User + ", Size: " + Size + ", Crust: " + Crust + ", Topping 1: " + Topping1 + ", Topping 2: " + Topping2 + ", Topping 3: " + Topping3 + ", Topping 4: " + Topping4 + ", Topping 5: " + Topping5;
-        }
+    public int Amount { get; set; }
+    public override string ToString()
+    {
+      return "Store: " + Store + ", User: " + User + ", Size: " + Size + ", Crust: " + Crust + ", Topping 1: " + Topping1 + ", Topping 2: " + Topping2 + ", Topping 3: " + Topping3 + ", Topping 4: " + Topping4 + ", Topping 5: " + Topping5;
+    }
   
   }
 }

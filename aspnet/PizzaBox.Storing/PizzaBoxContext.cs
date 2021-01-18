@@ -24,11 +24,6 @@ namespace PizzaBox.Storing
         new Store() { EntityId = 2, Name = "Dominoes" },
         new Store() { EntityId = 3, Name = "Pizza Hut" }
       );
-
-
-      // builder.Entity<Order>().HasOne(o => o.Store).WithMany(s => s.Orders);
-      // builder.Entity<Store>().HasMany(s => s.Orders).WithOne(o => o.Store);
-      // builder.Entity<Pizza>().HasMany<Topping>(p => p.Ingredients).WithMany(t => t.Pizzas);
     }
   }
 }

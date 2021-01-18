@@ -32,8 +32,7 @@ namespace PizzaBox.Client.Controllers {
 
             customer.Order = new OrderViewModel()
             {
-                Orders = _ctx.GetOrders(),
-                Pizzas = _ctx.GetPizzasByStore(model.Store),
+                Orders = _ctx.GetOrdersByStore(model.Store),
                 Users = _ctx.GetUsers()
             };
       
