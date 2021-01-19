@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       DOCKER_TOKEN: ${{ secrets.PROJECT1DOCKERTOKEN }}
-      DOCKER_USER: ${{ secrets.DOCKER_USER }}
+      DOCKER_USER: ${{ secrets.PROJECT1DOCKERUSER }}
     steps:
       - uses: actions/checkout@v2
       - run: echo $DOCKER_TOKEN | docker login -u $DOCKER_USER --password-stdin
