@@ -15633,6 +15633,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/CreateUser.cshtml",
+      "TargetPath": "Views\\Shared\\CreateUser.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/ViewCustomerOrder.cshtml",
       "TargetPath": "Views\\Shared\\ViewCustomerOrder.cshtml",
       "FileKind": "mvc"
@@ -15655,6 +15660,16 @@
     {
       "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Home/Privacy.cshtml",
       "TargetPath": "Views\\Home\\Privacy.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/UserCreated.cshtml",
+      "TargetPath": "Views\\Shared\\UserCreated.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/home/michael/revature/projects/p1/aspnet/PizzaBox.Client/Views/Shared/CreateUserError.cshtml",
+      "TargetPath": "Views\\Shared\\CreateUserError.cshtml",
       "FileKind": "mvc"
     },
     {

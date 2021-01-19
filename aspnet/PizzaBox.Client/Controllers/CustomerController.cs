@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using PizzaBox.Storing;
 using PizzaBox.Client.Models;
+using PizzaBox.Domain.Models;
 
 namespace PizzaBox.Client.Controllers
 {
@@ -12,6 +13,18 @@ namespace PizzaBox.Client.Controllers
     public CustomerController(PizzaBoxRepository context)
     {
       _ctx = context;
+    }
+
+    [HttpGet]
+    public IActionResult NewUser()
+    {
+      var customer = new CustomerViewModel();
+
+      customer.Order = new OrderViewModel()
+      {
+        Users = _ctx.GetUsers()
+      };
+      return View("createuser", customer.Order);
     }
 
     [HttpGet]
@@ -53,6 +66,24 @@ namespace PizzaBox.Client.Controllers
       };
       
       return View("CustomerOrders", customer.Order);
+    }
+
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult CreateUser(OrderViewModel model)
+    {
+      foreach(string u in _ctx.GetUsers()) {
+        if(model.User == u) return View("createusererror");
+      }
+      var newUser = new User()
+      {
+        Name = model.User
+      };
+
+      _ctx.AddUser(newUser);
+      _ctx.ContextSaveChanges();
+
+      return View("UserCreated");
     }
   }
 }

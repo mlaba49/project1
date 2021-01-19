@@ -1,0 +1,17 @@
+@model PizzaBox.Client.Models.OrderViewModel
+
+<h1>Create User</h1>
+
+Current Users:
+@foreach (var user in Model.Users)
+{
+    <br>
+    @user
+}
+
+<form asp-action="createUser" asp-controller="customer" asp-antiforgery="true" method="POST">
+  <label for="name" asp-for="@Model.User">Name:</label>
+    <input type="text" id="name" name="User" asp-for="@Model.User">
+  <br>
+  <button type="submit">Create User</button>
+</form>

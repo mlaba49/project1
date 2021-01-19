@@ -14,6 +14,14 @@ namespace PizzaBox.Storing
       _ctx = context;
     }
 
+    public void AddUser(User u) {
+      _ctx.Users.Add(u);
+    }
+
+    public void ContextSaveChanges() {
+      _ctx.SaveChanges();
+    }
+
     public List<string> GetStores()
     {
       return _ctx.Stores.Select(s => s.Name).ToList();
