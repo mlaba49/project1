@@ -1,5 +1,17 @@
-order
-[required] each order must be able to view/list/edit its collection of pizzas
-customer
-[required] must be able to only order from 1 location in a 24-hour period with no reset
-[required] must be able to only order once every 2-hour period
+PizzaBox
+
+This app allows the user to register as a customer and order pizza from one of two locations.
+
+Technologies Used: C#, ASP.NET Web API, SQL Server, HTML, JavaScript, CSS, SonarCloud, Docker
+
+Features:
+Register as a user
+Order pizza from several stores
+View customer order history
+View store order history
+
+To do list:
+Remove unnecessary clutter
+Display total store revenue
+Prevent customer from ordering too many times in a given time period
+Allow customer to order multiple different pizzas in a single order
