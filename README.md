@@ -2,7 +2,15 @@ PizzaBox
 
 This app allows the user to register as a customer and order pizza from one of two locations.
 
-Technologies Used: C#, ASP.NET Web API, SQL Server, HTML, JavaScript, CSS, SonarCloud, Docker
+Technologies Used:<br>
+C#<br>
+ASP.NET Web API<br>
+SQL Server<br>
+HTML<br>
+JavaScript<br>
+CSS<br>
+SonarCloud<br>
+Docker
 
 Features:<br>
 Register as a user<br>
